@@ -25,7 +25,7 @@ class App extends Component {
       this.setState({
         notes: [...this.state.notes, ...notes2]
       });
-    }, 10000);
+    }, 3000);
   }
 
   render() {
@@ -33,9 +33,9 @@ class App extends Component {
       <div className="App">
         <Header title="Notes" />
 
-        <Content>
+        {/* <Content> */}
           <Notes notes={this.state.notes} />
-        </Content>
+        {/* </Content> */}
 
         <Footer />
       </div>

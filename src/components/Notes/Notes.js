@@ -7,12 +7,12 @@ const formatTime = 'YYYY-MM-DD HH:mm:ss';
 class Notes extends Component {
   constructor() {
     super();
-
     // We save the first date when the data is 
     // rendered at the beginning
     this.state = {
       lastUpdate: moment().format(formatTime).toString()
     }
+   
   }
 
   componentWillReceiveProps(nextProps) {
@@ -24,8 +24,8 @@ class Notes extends Component {
     }
   }
   render() {
-    const { notes } = this.props;
-
+    const { notes, username } = this.props;
+    console.log(username)
     return (
       <div className="Notes">
         <h1>Notes:</h1>
